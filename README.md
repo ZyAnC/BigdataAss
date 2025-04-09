@@ -10,7 +10,7 @@ This project **(bigdata.ipynb)** is divided into two parts and demonstrates a pi
 
 - **Part 1:** Use `pandas` and `pymongo` to load CSV data into MongoDB. Check if need data cleaning. (Fahimeh Gholami)
 - **Part 2:** Use `PySpark` to read data from MongoDB, cache data, and optimize performance using Spark settings. (Yilin Lai)
-- **Part 3:** Compare Performance between Spark SQL and DataFrame API. (Yan Zheng)
+- **Part 3:** Performance exploration and optimization. (Yan Zheng)
 
 ---
 
@@ -66,7 +66,7 @@ Run all cells in the notebook to execute both parts of the project:
 - Sets `spark.sql.shuffle.partitions` to 50 for performance optimization
 - Caches `finance_df` to improve reusability
 
-#### Part 3: Compare Performance between Spark SQL and DataFrame API
+#### Part 3:Performance exploration and optimization
 
 **Spark SQL vs DataFrame API Benchmark**
 
@@ -121,7 +121,6 @@ Run all cells in the notebook to execute both parts of the project:
 To clear all documents from the MongoDB database:
 
 ```python
-# In a Python shell
 from pymongo import MongoClient
 client = MongoClient("mongodb://localhost:27017/")
 db = client["regional_economy"]
