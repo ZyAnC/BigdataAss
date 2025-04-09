@@ -8,9 +8,9 @@ This project **(bigdata.ipynb)** is divided into two parts and demonstrates a pi
 
 ## Project Overview
 
-- **Part 1:** Use `pandas` and `pymongo` to load CSV data into MongoDB.Check  if need data cleaning (Fahimeh Gholami)
+- **Part 1:** Use `pandas` and `pymongo` to load CSV data into MongoDB. Check if need data cleaning. (Fahimeh Gholami)
 - **Part 2:** Use `PySpark` to read data from MongoDB, cache data, and optimize performance using Spark settings. (Yilin Lai)
-- **Part 3:** 
+- **Part 3:** Compare Performance between Spark SQL and DataFrame API. (Yan Zheng)
 
 ---
 
@@ -66,7 +66,35 @@ Run all cells in the notebook to execute both parts of the project:
 - Sets `spark.sql.shuffle.partitions` to 50 for performance optimization
 - Caches `finance_df` to improve reusability
 
-#### Part 3: 
+#### Part 3: Compare Performance between Spark SQL and DataFrame API
+
+**Spark SQL vs DataFrame API Benchmark**
+
+- Registers `finance_df` as a temp view and runs a SQL query to calculate the sum of `Less_than_5000` by year
+- Compares the performance of the same aggregation using the DataFrame API
+
+**Schema Check and Preprocessing**
+
+- Displays schema and sample data from `industry_df` and `education_df`
+- Converts specific finance columns to integers
+- Fills missing values in `industry_df` and `education_df`
+
+**Optimized Join Operation**
+
+- Performs a broadcast join between `finance_df` and `education_df` on the `Year` column
+
+**Aggregation & Visualization**
+
+- Aggregates total income under $5000 by year using `groupBy().sum()`
+- Converts the result to a pandas DataFrame
+- Visualizes the trend using `matplotlib` (line plot)
+
+**Complex Query with MongoDB Aggregation Pipeline**
+
+- Uses a MongoDB aggregation pipeline directly within Spark to:
+  - Filter documents for years >= 2019
+  - Group and sum `Less_than_5000`
+  - Sort and project relevant fields 
 
 ---
 
