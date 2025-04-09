@@ -10,7 +10,7 @@ This project **(bigdata.ipynb)** is divided into two parts and demonstrates a pi
 
 - **Part 1:** Use `pandas` and `pymongo` to load CSV data into MongoDB. Check if need data cleaning. (Fahimeh Gholami)
 - **Part 2:** Use `PySpark` to read data from MongoDB, cache data, and optimize performance using Spark settings. (Yilin Lai)
-- **Part 3:** Performance exploration and optimization. (Yan Zheng)
+- **Part 3:** Compare Performance between Spark SQL and DataFrame API. (Yan Zheng)
 
 ---
 
@@ -44,9 +44,9 @@ mongod
 
 ### 2. Open and Run `bigdata.ipynb`
 
-Run all cells in the notebook to execute both parts of the project:
+Run all cells in the notebook to execute parts of the project:
 
-#### Part 1: Data Ingestion (via Pandas and PyMongo)
+## Part 1: Data Ingestion (via Pandas and PyMongo)
 
 - Loads data from:
     - `Finance.csv`
@@ -59,14 +59,14 @@ Run all cells in the notebook to execute both parts of the project:
     - `education`
 - Creates index on `Year` field in all collections
 
-#### Part 2: Spark Analysis (via PySpark and MongoDB Connector)
+## Part 2: Spark Analysis (via PySpark and MongoDB Connector)
 
 - Creates a SparkSession configured with MongoDB Spark Connector
 - Loads collections as DataFrames
 - Sets `spark.sql.shuffle.partitions` to 50 for performance optimization
 - Caches `finance_df` to improve reusability
 
-#### Part 3:Performance exploration and optimization and visualization
+## Part 3: Compare Performance between Spark SQL and DataFrame API
 
 **Spark SQL vs DataFrame API Benchmark**
 
@@ -121,6 +121,7 @@ Run all cells in the notebook to execute both parts of the project:
 To clear all documents from the MongoDB database:
 
 ```python
+# In a Python shell
 from pymongo import MongoClient
 client = MongoClient("mongodb://localhost:27017/")
 db = client["regional_economy"]
@@ -128,5 +129,8 @@ db.finance.delete_many({})
 db.industry.delete_many({})
 db.education.delete_many({})
 ```
+
+
+
 
 
