@@ -6,7 +6,7 @@ This project **(bigdata.ipynb)** is divided into two parts and demonstrates a pi
 
 ---
 
-## Project Overviews
+## Project Overview
 
 - **Part 1:** Use `pandas` and `pymongo` to load CSV data into MongoDB. Check if need data cleaning. (Fahimeh Gholami)
 - **Part 2:** Use `PySpark` to read data from MongoDB, cache data, and optimize performance using Spark settings. (Yilin Lai)
@@ -14,7 +14,7 @@ This project **(bigdata.ipynb)** is divided into two parts and demonstrates a pi
 
 ---
 
-## Setup & Requirements
+## Setup and Requirements
 
 Install the required Python packages:
 
