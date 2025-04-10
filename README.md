@@ -66,7 +66,7 @@ Run all cells in the notebook to execute parts of the project:
 - Sets `spark.sql.shuffle.partitions` to 50 for performance optimization
 - Caches `finance_df` to improve reusability
 
-## Part 3: Performance exploration and optimization and visualization
+## Part 3: Performance exploration, optimization and visualization
 
 **Spark SQL vs DataFrame API Benchmark**
 
