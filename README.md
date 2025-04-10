@@ -30,7 +30,7 @@ Ensure the following are installed and configured:
 
 ---
 
-## How to Run the Notebook
+## How to Run the Notebook:
 
 ### 1. Start MongoDB
 
